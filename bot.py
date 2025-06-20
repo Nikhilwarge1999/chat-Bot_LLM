@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def call_groq_gpt(prompt, model="llama3-70b-8192"):
-    api_key = os.getenv("GROQ_API_KEY")
+    api_key = st.secrets["GROQ_API_KEY"]
     headers = {
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json"
